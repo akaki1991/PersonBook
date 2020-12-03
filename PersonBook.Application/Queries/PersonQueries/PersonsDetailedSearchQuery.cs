@@ -54,7 +54,8 @@ namespace PersonBook.Application.Queries.PersonQueries
                                            && (BirthDateTo == null ? true : x.BirthDate <= BirthDateTo)
                                            && (CityId == null ? true : x.CityId == CityId)
                                            && (string.IsNullOrEmpty(CityName) ? true : x.CityName == CityName))
-                                   .Skip(PageSize * PageIndex)
+                                   .OrderBy(x => x.CreateDate)
+                                   .Skip(PageSize * (PageIndex - 1))
                                    .Take(PageSize)
                                    .ToListAsync();
 

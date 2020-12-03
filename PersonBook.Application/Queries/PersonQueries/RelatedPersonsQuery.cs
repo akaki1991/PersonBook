@@ -39,6 +39,7 @@ namespace PersonBook.Application.Queries.PersonQueries
 
             var releatedPersons = await _db.Set<PersonReadModel>()
                 .Where(x => relationsIds.Contains(x.Id))
+                .OrderBy(x => x.CreateDate)
                 .Skip(PageSize * (PageIndex - 1))
                 .Take(PageSize)
                 .ToListAsync();

@@ -25,6 +25,7 @@ namespace PersonBook.Application.Queries.PersonQueries
                                    .Where(x => EF.Functions.Like(x.FirstName, $"%{SearchTerm}%")
                                                || EF.Functions.Like(x.LastName, $"%{SearchTerm}%")
                                                || EF.Functions.Like(x.PersonalNumber, $"%{SearchTerm}%"))
+                                   .OrderBy(x => x.CreateDate)
                                    .Skip(PageSize * (PageIndex - 1))
                                    .Take(PageSize)
                                    .ToListAsync();

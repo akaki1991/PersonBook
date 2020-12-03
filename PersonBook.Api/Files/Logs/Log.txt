@@ -201,3 +201,138 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
    at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-03 15:53:14.564 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-03 15:53:14.610 +04:00 [INF] Hosting environment: Development
+2020-12-03 15:53:14.612 +04:00 [INF] Content root path: C:\Users\Akaki\Desktop\TBC\PersonBook\PersonBook.Api
+2020-12-03 15:53:14.612 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/index.html  
+2020-12-03 15:53:14.730 +04:00 [INF] Request finished in 124.1626ms 200 text/html;charset=utf-8
+2020-12-03 15:53:15.105 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/v1/swagger.json  
+2020-12-03 15:53:15.275 +04:00 [INF] Request finished in 170.5041ms 200 application/json;charset=utf-8
+2020-12-03 15:53:26.542 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/detailedsearch?Gender=1  
+2020-12-03 15:53:26.590 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:53:26.642 +04:00 [INF] Route matched with {action = "DetailedSearch", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DetailedSearch(PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:53:26.914 +04:00 [INF] Executing action method PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api) - Validation state: "Valid"
+2020-12-03 15:53:35.142 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:53:36.083 +04:00 [INF] Executed DbCommand (64ms) [Parameters=[@__Gender_0='?' (Size = 1) (DbType = Byte), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Gender] = @__Gender_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-12-03 15:54:04.394 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-03 15:54:04.432 +04:00 [INF] Hosting environment: Development
+2020-12-03 15:54:04.430 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/index.html  
+2020-12-03 15:54:04.434 +04:00 [INF] Content root path: C:\Users\Akaki\Desktop\TBC\PersonBook\PersonBook.Api
+2020-12-03 15:54:04.557 +04:00 [INF] Request finished in 137.1469ms 200 text/html;charset=utf-8
+2020-12-03 15:54:04.879 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/v1/swagger.json  
+2020-12-03 15:54:05.068 +04:00 [INF] Request finished in 189.2215ms 200 application/json;charset=utf-8
+2020-12-03 15:54:08.808 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/detailedsearch?Gender=1  
+2020-12-03 15:54:08.845 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:54:08.905 +04:00 [INF] Route matched with {action = "DetailedSearch", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DetailedSearch(PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:54:16.320 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:54:17.208 +04:00 [INF] Executed DbCommand (76ms) [Parameters=[@__Gender_0='?' (Size = 1) (DbType = Byte), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Gender] = @__Gender_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-12-03 15:54:40.765 +04:00 [INF] Executing ObjectResult, writing value of type 'PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQueryResult'.
+2020-12-03 15:54:40.786 +04:00 [INF] Executed action PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api) in 31876.068ms
+2020-12-03 15:54:40.788 +04:00 [INF] Executed endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:54:40.794 +04:00 [INF] Request finished in 31986.5169ms 200 application/json; charset=utf-8
+2020-12-03 15:54:50.083 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/detailedsearch?Firsname=%E1%83%90%E1%83%99%E1%83%90%E1%83%99%E1%83%98  
+2020-12-03 15:54:50.086 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:54:50.087 +04:00 [INF] Route matched with {action = "DetailedSearch", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DetailedSearch(PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:54:51.686 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:54:51.714 +04:00 [INF] Executed DbCommand (14ms) [Parameters=[@__Firsname_0='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[FirstName] = @__Firsname_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-12-03 15:54:51.715 +04:00 [INF] Executing ObjectResult, writing value of type 'PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQueryResult'.
+2020-12-03 15:54:51.716 +04:00 [INF] Executed action PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api) in 1628.5763ms
+2020-12-03 15:54:51.716 +04:00 [INF] Executed endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:54:51.716 +04:00 [INF] Request finished in 1633.969ms 200 application/json; charset=utf-8
+2020-12-03 15:54:56.522 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/detailedsearch?Firsname=%E1%83%90%E1%83%99%E1%83%90%E1%83%99%E1%83%98  
+2020-12-03 15:54:56.524 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.DetailedSearch (PersonBook.Api)'
+2020-12-03 15:54:56.524 +04:00 [INF] Route matched with {action = "DetailedSearch", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DetailedSearch(PersonBook.Application.Queries.PersonQueries.PersonsDetailedSearchQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:55:07.428 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:55:07.669 +04:00 [INF] Executed DbCommand (68ms) [Parameters=[@__Firsname_0='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[FirstName] = @__Firsname_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-12-03 15:55:41.960 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-03 15:55:41.993 +04:00 [INF] Hosting environment: Development
+2020-12-03 15:55:41.991 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/index.html  
+2020-12-03 15:55:41.994 +04:00 [INF] Content root path: C:\Users\Akaki\Desktop\TBC\PersonBook\PersonBook.Api
+2020-12-03 15:55:42.084 +04:00 [INF] Request finished in 96.4187ms 200 text/html;charset=utf-8
+2020-12-03 15:55:42.607 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/v1/swagger.json  
+2020-12-03 15:55:42.761 +04:00 [INF] Request finished in 154.8209ms 200 application/json;charset=utf-8
+2020-12-03 15:55:42.779 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/details?Id=1  
+2020-12-03 15:55:42.828 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 15:55:42.902 +04:00 [INF] Route matched with {action = "Details", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(PersonBook.Application.Queries.PersonQueries.PersonDetailsQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:55:43.149 +04:00 [INF] Executing action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) - Validation state: "Valid"
+2020-12-03 15:55:44.012 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:55:44.655 +04:00 [INF] Executed DbCommand (75ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Id] = @__Id_0
+2020-12-03 15:55:44.767 +04:00 [INF] Executed action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1608.1397ms.
+2020-12-03 15:55:44.772 +04:00 [INF] Executing ObjectResult, writing value of type 'PersonBook.Application.Queries.PersonQueries.PersonDetailsQueryResult'.
+2020-12-03 15:55:44.790 +04:00 [INF] Executed action PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) in 1883.0912ms
+2020-12-03 15:55:44.791 +04:00 [INF] Executed endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 15:55:44.796 +04:00 [INF] Request finished in 2017.3873ms 200 application/json; charset=utf-8
+2020-12-03 15:56:00.315 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/details?Id=1  
+2020-12-03 15:56:00.319 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 15:56:00.319 +04:00 [INF] Route matched with {action = "Details", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(PersonBook.Application.Queries.PersonQueries.PersonDetailsQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:56:00.336 +04:00 [INF] Executing action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) - Validation state: "Valid"
+2020-12-03 15:56:02.102 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:56:02.154 +04:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Id] = @__Id_0
+2020-12-03 15:56:08.849 +04:00 [INF] Executed action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8512.9357ms.
+2020-12-03 15:56:08.851 +04:00 [INF] Executing ObjectResult, writing value of type 'PersonBook.Application.Queries.PersonQueries.PersonDetailsQueryResult'.
+2020-12-03 15:56:08.854 +04:00 [INF] Executed action PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) in 8533.8626ms
+2020-12-03 15:56:08.854 +04:00 [INF] Executed endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 15:56:08.855 +04:00 [INF] Request finished in 8540.9462ms 200 application/json; charset=utf-8
+2020-12-03 15:56:27.648 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-03 15:56:27.684 +04:00 [INF] Hosting environment: Development
+2020-12-03 15:56:27.684 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/index.html  
+2020-12-03 15:56:27.687 +04:00 [INF] Content root path: C:\Users\Akaki\Desktop\TBC\PersonBook\PersonBook.Api
+2020-12-03 15:56:27.771 +04:00 [INF] Request finished in 93.9687ms 200 text/html;charset=utf-8
+2020-12-03 15:56:28.061 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/v1/swagger.json  
+2020-12-03 15:56:28.220 +04:00 [INF] Request finished in 159.6739ms 200 application/json;charset=utf-8
+2020-12-03 15:56:35.085 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/details?Id=1  
+2020-12-03 15:56:35.135 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 15:56:35.217 +04:00 [INF] Route matched with {action = "Details", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(PersonBook.Application.Queries.PersonQueries.PersonDetailsQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 15:56:35.507 +04:00 [INF] Executing action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) - Validation state: "Valid"
+2020-12-03 15:56:41.309 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 15:56:42.100 +04:00 [INF] Executed DbCommand (72ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Id] = @__Id_0
+2020-12-03 16:00:20.445 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-03 16:00:20.553 +04:00 [INF] Hosting environment: Development
+2020-12-03 16:00:20.556 +04:00 [INF] Content root path: C:\Users\Akaki\Desktop\TBC\PersonBook\PersonBook.Api
+2020-12-03 16:00:20.568 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/index.html  
+2020-12-03 16:00:20.568 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/v1/person/details?Id=1  
+2020-12-03 16:00:20.675 +04:00 [INF] Executing endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 16:00:20.721 +04:00 [INF] Request finished in 162.0525ms 200 text/html;charset=utf-8
+2020-12-03 16:00:20.825 +04:00 [INF] Route matched with {action = "Details", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(PersonBook.Application.Queries.PersonQueries.PersonDetailsQuery) on controller PersonBook.Api.Controllers.V1.PersonController (PersonBook.Api).
+2020-12-03 16:00:21.178 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/swagger/v1/swagger.json  
+2020-12-03 16:00:21.284 +04:00 [INF] Executing action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) - Validation state: "Valid"
+2020-12-03 16:00:27.198 +04:00 [INF] Request finished in 6020.0199ms 200 application/json;charset=utf-8
+2020-12-03 16:00:28.361 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'PersonBookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2020-12-03 16:00:29.419 +04:00 [INF] Executed DbCommand (94ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[AggregateRootId], [p].[BirthDate], [p].[CityId], [p].[CityName], [p].[CreateDate], [p].[FirstName], [p].[Gender], [p].[HomePhoneNumber], [p].[LastChangeDate], [p].[LastName], [p].[MobilePhoneNumber], [p].[OfficePhoneNumber], [p].[PersonalNumber], [p].[PhotoHeight], [p].[PhotoId], [p].[PhotoUrl], [p].[PhotoWidth]
+FROM [PersonBookReadModel].[PersonReadModel] AS [p]
+WHERE [p].[Id] = @__Id_0
+2020-12-03 16:00:56.730 +04:00 [INF] Executed action method PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 35432.5125ms.
+2020-12-03 16:00:56.740 +04:00 [INF] Executing ObjectResult, writing value of type 'PersonBook.Application.Queries.PersonQueries.PersonDetailsQueryResult'.
+2020-12-03 16:00:56.783 +04:00 [INF] Executed action PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api) in 35949.1743ms
+2020-12-03 16:00:56.784 +04:00 [INF] Executed endpoint 'PersonBook.Api.Controllers.V1.PersonController.Details (PersonBook.Api)'
+2020-12-03 16:00:56.791 +04:00 [INF] Request finished in 36233.1123ms 200 application/json; charset=utf-8
