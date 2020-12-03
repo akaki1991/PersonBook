@@ -38,7 +38,7 @@ namespace PersonBook.Api.Controllers.V1
         {
             var result = await _commandExecutor.ExecuteAsync(command);
 
-            return CommandResultToHttpResponse(result, EntityStatusCode.Created);
+            return CommandResultToHttpResponse(result, EntityStatusCode.Updated);
         }
 
         [HttpDelete("delete")]
@@ -48,7 +48,7 @@ namespace PersonBook.Api.Controllers.V1
         {
             var result = await _commandExecutor.ExecuteAsync(command);
 
-            return CommandResultToHttpResponse(result, EntityStatusCode.Created);
+            return CommandResultToHttpResponse(result, EntityStatusCode.Deleted);
         }
     }
 }
